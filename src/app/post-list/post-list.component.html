@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"
+                >Tunisia Charity <i class="fas fa-heart"></i></a>
+            <button
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a routerLink="/home" routerLinkActivate="active" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/about" routerLinkActivate="active" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/want to help" routerLinkActivate="active" class="nav-link">want to help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/someone need help" routerLinkActivate="active" class="nav-link">someone needs help</a>
+                    </li>
+
+                    
+                </ul>
+            </div>
+        </div>  
+    </nav>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container">
+      <!-- No data message -->
+      <p *ngIf="Post.length <= 0" class="no-data text-center">There is no posts added yet!</p>
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div *ngFor="let post of Post; let i = index">
+            <div class='report-module'>
+              <div class='thumbnail'>
+                <a href="#"><img src='https://25.media.tumblr.com/tumblr_ly7psofQpU1qju670o1_500.jpg'></a>
+              </div>
+            <div class='post-content'>
+                <div class='category'>Thank you </div>
+                <label for="inputEmail3">Name :</label> {{post.first_name}}
+                <br>
+                <label for="inputEmail3">Last name :</label> {{post.last_name}}
+                <br>
+                <label for="inputEmail3">Email :</label> {{post.email}}
+                <br>
+                <label for="inputEmail3">Phone :</label> {{post.phone}}
+                <br>
+                <label for="inputEmail3">Adress :</label> {{post.adress}}
+                <br>
+                <label for="inputEmail3">Situation :</label>{{post.situation}}
+                <br>
+                <label for="inputEmail3">Need:</label> {{post.need}}
+               
+                <div class='post-meta'>
+                    <span class="timestamp" [routerLink]="['/edit-post/',post._id]">
+                      <div class="btn btn-primary" href='#'>Edit</div>
+                    </span>
+                    <span class="timestamp" (click)="removePost(post, i)">
+                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    </span>
+                  </div>
+              </div>  
+                
+              </div>
+            </div>
+         </div>
+    </div> 
+</div>
+

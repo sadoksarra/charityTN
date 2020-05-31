@@ -1,0 +1,96 @@
+body {
+    overflow-x: hidden;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.navbar .nav-item.active {
+    border-left: #444 3px solid;
+}
+
+.carousel-item {
+    height: 450px;
+    
+}
+
+.carousel-image-1 {
+    background: url("../img/collectefound.png");
+    background-size: cover;
+    height: 500px;
+}
+
+.carousel-image-2 {
+    background: url("../img/cc3.jpg");
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background: url("../img/cc7.jpg");
+    background-size: cover;
+}
+
+.receipe-image {
+    margin: 20px auto;
+    width: 100%;
+}
+
+#home-heading {
+    position: relative;
+    min-height: 200px;
+    min-width: 100%;
+    background: url("../img/help.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#video-play {
+    position: relative;
+    min-height: 200px;
+    background: url("../img/help2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0 -300px;
+    text-align: center;
+    color: #fff;
+}
+
+#video-play a {
+    color: #fff;
+}
+
+#page-header {
+    height: 200px;
+    background: url("../img/snh2.jpg");
+    background-position: 0 -360px;
+    background-attachment: fixed;
+    color: #fff;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+    background-size: cover;
+}
+
+.about-img {
+    margin-top: -50px;
+}
+
+#main-footer {
+    background: #000;
+    color: #fff;
+}

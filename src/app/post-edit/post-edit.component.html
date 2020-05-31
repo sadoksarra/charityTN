@@ -1,0 +1,209 @@
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand"
+                        >Tunisia Charity <i class="fas fa-heart"></i></a>
+                    <button
+                        class="navbar-toggler"
+                        data-toggle="collapse"
+                        data-target="#navbarCollapse"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a routerLink="/home" routerLinkActivate="active" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/about" routerLinkActivate="active" class="nav-link">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/want to help" routerLinkActivate="active" class="nav-link">want to help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/someone need help" routerLinkActivate="active" class="nav-link">someone needs help</a>
+                            </li>
+            
+                            
+                        </ul>
+                    </div>
+                </div>  
+            </nav>
+
+        <!-- PAGE HEADER -->
+        <header id="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 m-auto text-center">
+                        <h1>Be good , and good will come to you</h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                   
+                                     <i> <b> Upon making a gift, we will immediately send you a video message from our staff in
+                                            the field so you can see the impact of your donation. so please Get In Touch </b></i> 
+                                   
+                               
+
+                               
+                                
+                                <h4> <i class="fas fa-envelope"></i> Email:</h4> 
+                                 <p>Khadija@sarra.com</p>
+                               
+                                <h4> <i class="fas fa-phone"> </i>Phone :</h4>
+                                <p>(216) 99 999 999</p>
+                            </div>
+                            
+                                    
+                                
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card p-4">
+                            <div class="card-body">
+                                <h3 class="text-center">
+                                    Update post
+                                </h3>
+                                <hr />
+                              <form [formGroup]="editForm" (ngSubmit)="onSubmit()">      
+                                <div class="row">
+                                  <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input
+                                                formControlName="first_name"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="FirstName"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input
+                                                formControlName="last_name"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Last Name"
+                                                
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input
+                                                formControlName="email"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Email"
+                                                
+                                            />
+                                                    
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input
+                                                formControlName="phone"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Phone Number"
+                                                
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea
+                                                class="form-control"
+                                                placeholder="describe the situation example: flen was 45 years old need food"
+                                                formControlName="situation"
+                                                ></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea
+                                                    formControlName="adress"
+                                                    class="form-control"
+                                                    placeholder="Example of adress (in England): Mr John Smith,132, My Street,Bigtown BG23 4YZ England"
+
+                                                    ></textarea>
+                                            </div>
+                                        </div>
+                                    <div class="col-md-12">
+                                            
+                                           <label> Please select the Need</label>
+                                            <div class="form-group" >
+                                                    <select class="custom-select form-control" 
+                                                    (change)="updateNeed($event.target.value)"
+                                                    formControlName="need">
+                                                    <option value="">Choose...</option>
+                                                    <option *ngFor="let need of needs" value="{{need}}">{{need}}
+                                                    </option>
+                                                  </select>
+                                                  
+                                            </div>      
+                                          
+                                     </div>
+                                        <br>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input
+                                                type="submit"
+                                                value="Envoyer"
+                                                class="btn btn-outline-danger btn-block"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STAFF -->
+       
+        <!-- FOOTER -->
+        <footer id="main-footer" class="text-center p-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col"><p>Copyright &copy; Tunisia Charity</p></div>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"
+        ></script>
+ 
+
+
